@@ -31,3 +31,8 @@ body{
   animation-name: fadeIn;
 }
 
+.center{
+  text-align: center;
+  padding: 10px;
+}
+
