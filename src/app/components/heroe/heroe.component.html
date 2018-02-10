@@ -1,1 +1,20 @@
-<p>Heroe works</p>
+<div class="row animated fadeIn ">
+  <div class="col-md-4 container img-heroe">
+    <img [src]="heroe.img" [alt]="heroe.nombre" class="img-fluid">
+    <br>
+    <a [routerLink]="['/heroes/undefined']" class="btn btn-outline-danger">Regresar</a>
+  </div>
+  <div class="col-md-8">
+    <div class="principal-name">
+        <h2>{{heroe.nombre | uppercase}} <small>({{heroe.aparicion | date:'y'}})</small> </h2>
+    </div>
+    <hr>
+    <img *ngIf="heroe.casa == 'DC'" class="logo-casa" src="http://www.brandemia.org/sites/default/files/sites/default/files/logo_dc_comics_nuevo.jpg" alt="DC logo">
+    <img *ngIf="heroe.casa != 'DC'" class="logo-casa" src="http://1000logos.net/wp-content/uploads/2017/08/Marvel-Logo.png" alt="Marvel logo">
+    <br>
+    <p>
+      <br>
+      {{heroe.bio}}
+    </p>
+  </div>
+</div>
